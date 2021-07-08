@@ -1,0 +1,123 @@
+<div class="container">
+  <form [formGroup]="loginForm" #myForm="ngForm">
+    <div class="form-group">
+      <label for="exampleInputEmail"> Name</label>
+      <input type="text" class="form-control" maxlength="50" name="name" formControlName="name" aria-describedby="emailHelp" 
+      [(ngModel)]="userObj.name">
+      <!-- <span *ngIf="name?.touched &&  name?.invalid " > Name required</span>
+      <span *ngIf="name?.errors?.maxLength">Name should be less than 50 letters</span> -->
+      <div *ngIf="(name?.invalid && name?.touched) || name?.dirty">
+        <small *ngIf="name?.errors?.required" class="text-danger"> name is required</small>
+        
+        <small *ngIf="name?.errors?.pattern" class="text-danger">Please provide a valid NAME</small>
+      </div>
+      </div>
+      
+    
+    <div class="form-group">
+      <label for="exampleInputEmail">mobile number</label>
+      <input type="text" class="form-control" formControlName="mobile" name="mobile" aria-describedby="emailHelp" 
+      [(ngModel)]="userObj.mobile">
+      <!-- <span *ngIf=" mobile?.touched && mobile?.invalid"  > mobile required</span>
+      <span *ngIf="mobile?.errors?.pattern">mobile number is not valid</span> -->
+      <div *ngIf="(mobile?.invalid && mobile?.touched) || mobile?.dirty">
+        <small *ngIf="mobile?.errors?.required" class="text-danger"> mobile number is required</small>
+        
+        <small *ngIf="mobile?.errors?.pattern" class="text-danger">Please provide a valid mobile number</small>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail">Email address</label>
+      <input type="email" class="form-control" formControlName="email" name="email" aria-describedby="emailHelp" 
+      [(ngModel)]="userObj.email">
+      <!-- <span *ngIf="email?.touched && email?.invalid"  > email  required</span>
+      <span *ngIf="email?.errors?.pattern" > email is invalid</span> -->
+      <div *ngIf="(email?.invalid && email?.touched) || email?.dirty">
+        <small *ngIf="email?.errors?.required" class="text-danger"> email is required</small>
+        
+        <small *ngIf="email?.errors?.pattern" class="text-danger">Please provide a valid name</small>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail">Business name</label>
+      <input type="text" class="form-control" formControlName="bus" name="bus"
+      [(ngModel)]="userObj.bus" >
+      <div *ngIf="(bus?.invalid && bus?.touched) || bus?.dirty">
+        <small *ngIf="bus?.errors?.required" class="text-danger"> business name is required</small>
+        
+        <small *ngIf="bus?.errors?.pattern" class="text-danger">Please provide a valid  name</small>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail">address</label>
+      <input type="text" class="form-control" formControlName="address" name="address"
+      [(ngModel)]="userObj.address" >
+      <div *ngIf="(address?.invalid && address?.touched) || address?.dirty">
+        <small *ngIf="address?.errors?.required" class="text-danger"> address is required</small>
+        
+        <small *ngIf="address?.errors?.pattern" class="text-danger">Please provide a valid address</small>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail">state</label>
+      <input type="text" class="form-control" formControlName="state" name="state"
+      [(ngModel)]="userObj.state" >
+      <div *ngIf="(state?.invalid && state?.touched) || state?.dirty">
+        <small *ngIf="address?.errors?.required" class="text-danger"> state is required</small>
+        
+        <small *ngIf="state?.errors?.pattern" class="text-danger">Please provide a name</small>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail">district</label>
+      <input type="text" class="form-control" formControlName="district" name="district"
+      [(ngModel)]="userObj.district" >
+      <div *ngIf="(district?.invalid && district?.touched) || district?.dirty">
+        <small *ngIf="district?.errors?.required" class="text-danger"> district is required</small>
+        
+        <small *ngIf="district?.errors?.pattern" class="text-danger">Please provide a name</small>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail">pincode</label>
+      <input type="text" class="form-control" formControlName="pin" name="pin"
+      [(ngModel)]="userObj.pin" >
+      <div *ngIf="(pin?.invalid && pin?.touched) || pin?.dirty">
+        <small *ngIf="pin?.errors?.required" class="text-danger"> pin is required</small>
+        
+        <small *ngIf="pin?.errors?.pattern" class="text-danger">Please provide a valid pincode</small>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail">busstop</label>
+      <input type="text" class="form-control" formControlName="stop" name="stop"
+      [(ngModel)]="userObj.stop" >
+      <div *ngIf="(stop?.invalid && stop?.touched) || stop?.dirty">
+        <small *ngIf="stop?.errors?.required" class="text-danger"> busstop is required</small>
+        
+        <small *ngIf="stop?.errors?.pattern" class="text-danger">Please provide a valid name</small>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail">ADHAAR number</label>
+      <input type="text" class="form-control" formControlName="adhar" name="adhar"
+      [(ngModel)]="userObj.adhar" >
+      <div *ngIf="(adhar?.invalid && adhar?.touched) || adhar?.dirty">
+        <small *ngIf="adhar?.errors?.required" class="text-danger"> adhaar is required</small>
+        
+        <small *ngIf="adhar?.errors?.pattern" class="text-danger">Please provide a valid adhaar number</small>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail">PANnumber</label>
+      <input type="text" class="form-control" formControlName="pan" name="pan"
+      [(ngModel)]="userObj.pan" >
+      <div *ngIf="(pan?.invalid && pan?.touched) || pan?.dirty">
+        <small *ngIf="pan?.errors?.required" class="text-danger"> pan number is required</small>
+        
+        <small *ngIf="pan?.errors?.pattern" class="text-danger">Please provide a valid pan number</small>
+      </div>
+    </div>
+    <button type="button" [disabled]="myForm.invalid"  class="btn btn-primary"  (click)="addUser(myForm.value)">Submit</button>
+  </form>
+  

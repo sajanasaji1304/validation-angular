@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "name": "sajana",
+      "mobile": 9544288380,
+      "email": "sajanasaji13@gmail.com",
+      "bus": "kottyam",
+      "address": "female",
+      "state": "kerala",
+      "district": "kottyam",
+      "pincode": "1234",
+      "stop": "dfg",
+      "adhar": "1234",
+      "pan": "1234",
+      "id": 2
+    },
+    {
+      "name": "sajana",
+      "mobile": 1234567891,
+      "email": "sajanasaji13@gmail.com",
+      "bus": "afd",
+      "address": "dsaf",
+      "state": "awf",
+      "district": "faf",
+      "pin": 123,
+      "stop": "fd",
+      "adhar": 123,
+      "pan": 123,
+      "id": 3
+    },
+    {
+      "name": "sajana",
+      "mobile": "1234567891",
+      "email": "sajanasaji13@gmail.com",
+      "bus": "afd",
+      "address": "dsaf",
+      "state": "awf",
+      "district": "ASX",
+      "pin": "123456",
+      "stop": "fgjffg",
+      "adhar": "4516255667888865",
+      "pan": "AFX12345",
+      "id": 4
+    }
+  ]
+}
